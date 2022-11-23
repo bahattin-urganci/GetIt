@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  sql.data:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    networks:
+        - getit-network
+  getit.api:
+    image: ${DOCKER_REGISTRY-}getitapi
+    build:
+      context: .
+      dockerfile: src/GetIt.API/Dockerfile
+    depends_on:
+     - sql.data
+    networks:
+        - getit-network
+networks:
+  getit-network:
+    driver: bridge

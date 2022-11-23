@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  getit.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=Abcd!1234
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/root/.aspnet/https/aspnetapp.pfx
+      - ConnectionStrings__GetItAppDb=server=sql.data,15433;Database=GetItAppDb;User Id=sa;Password=Pass@word
+    ports:
+      - "80"
+      - "443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+  sql.data:
+    environment:
+     - SA_PASSWORD=Pass@word
+     - ACCEPT_EULA=Y
+    ports:
+       - "15433:1433"   
+        
