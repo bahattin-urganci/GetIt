@@ -1,6 +1,8 @@
-﻿namespace GetIt.Domain.Users
+﻿using GetIt.Domain.Base;
+
+namespace GetIt.Domain.Users
 {
-    public class AppUser
+    public class AppUser : BaseEntity
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

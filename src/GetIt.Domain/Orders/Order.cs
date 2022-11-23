@@ -1,6 +1,8 @@
-﻿namespace GetIt.Domain.Orders
+﻿using GetIt.Domain.Base;
+
+namespace GetIt.Domain.Orders
 {
-    public class Order
+    public class Order : BaseEntity
     {
         public int UserId { get; set; }
         public DateTime OrderDate { get; set; }

@@ -1,6 +1,8 @@
-﻿namespace GetIt.Domain.Orders
+﻿using GetIt.Domain.Base;
+
+namespace GetIt.Domain.Orders
 {
-    public class OrderDetail
+    public class OrderDetail : BaseEntity
     {
         public int OrderId { get; set; }
         public int ProductId { get; set; }
