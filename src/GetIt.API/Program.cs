@@ -1,3 +1,5 @@
+using GetIt.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -21,5 +23,5 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
+Initializer.InitDatabase(app);
 app.Run();

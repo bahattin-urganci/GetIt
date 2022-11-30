@@ -2,7 +2,7 @@
 
 namespace GetIt.Domain.Products
 {
-    public class Product : BaseEntity
+    public class Product : AuditEntity
     {
         public string Name { get; set; }
         public decimal BasePrice { get; set; }

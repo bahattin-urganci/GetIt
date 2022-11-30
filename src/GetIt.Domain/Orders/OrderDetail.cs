@@ -2,7 +2,7 @@
 
 namespace GetIt.Domain.Orders
 {
-    public class OrderDetail : BaseEntity
+    public class OrderDetail : AuditEntity
     {
         public int OrderId { get; set; }
         public int ProductId { get; set; }
