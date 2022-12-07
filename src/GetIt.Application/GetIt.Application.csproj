@@ -10,4 +10,15 @@
     <ProjectReference Include="..\GetIt.Data\GetIt.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Products\Commands\" />
+    <Folder Include="Products\Queries\" />
+    <Folder Include="Orders\Commands\" />
+    <Folder Include="Orders\Models\" />
+    <Folder Include="Orders\Queries\" />
+    <Folder Include="Users\Commands\" />
+    <Folder Include="Users\Models\" />
+    <Folder Include="Users\Queries\" />
+  </ItemGroup>
+
 </Project>

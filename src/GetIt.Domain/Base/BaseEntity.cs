@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GetIt.Domain.Base
 {
-    public class BaseEntity : IBaseEntity
+    public class BaseEntity : Entity, IBaseEntity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
