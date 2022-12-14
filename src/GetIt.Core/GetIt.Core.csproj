@@ -27,10 +27,4 @@
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Attributes\" />
-    <Folder Include="Mediator\Commands\" />
-    <Folder Include="Mediator\Queries\" />
-  </ItemGroup>
-
 </Project>

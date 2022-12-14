@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -22,6 +22,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GetIt.Application\GetIt.Application.csproj" />
+    <ProjectReference Include="..\GetIt.Core\GetIt.Core.csproj" />
+    <ProjectReference Include="..\GetIt.Data\GetIt.Data.csproj" />
+    <ProjectReference Include="..\GetIt.Domain\GetIt.Domain.csproj" />
   </ItemGroup>
 
 </Project>

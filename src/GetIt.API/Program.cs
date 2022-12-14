@@ -1,3 +1,4 @@
+using GetIt.API;
 using GetIt.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,7 +20,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.MapProductRoutes();
 app.UseAuthorization();
 
 app.MapControllers();

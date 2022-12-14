@@ -20,6 +20,7 @@ namespace GetIt.Application
         {
             _db = db;
             _dbSet = db.Set<T>();
+            Query= _dbSet.AsQueryable();
         }
 
         public IQueryable<T> Query { get; private set; }
