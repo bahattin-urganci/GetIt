@@ -12,5 +12,6 @@ namespace GetIt.Domain.Products
         }
         public string Name { get; set; }
         public decimal BasePrice { get; set; }
+
     }
 }

@@ -2,13 +2,14 @@
 using GetIt.Data;
 using GetIt.Domain;
 using GetIt.Domain.Base;
+using Microsoft.AspNetCore.Http;
 
 namespace GetIt.Application;
 public class UnitOfWork : IUnitOfWork
 {
     private readonly GetItDbContext _db;
     private readonly IDomainEventsDispatcher _domainEventsDispatcher;
-
+    private readonly IHttpContextAccessor _httpContextAccessor;
     public UnitOfWork(GetItDbContext db,IDomainEventsDispatcher domainEventsDispatcher)
     {
         _db = db;
@@ -22,7 +23,7 @@ public class UnitOfWork : IUnitOfWork
         return await _db.SaveChangesAsync(cancellationToken);
     }
     private void SetAudit()
-    {
+    {        
         //userid otomatik işlenebilir
         //outbox pattern uygulanabilir logging amaçları için 
 

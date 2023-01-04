@@ -1,4 +1,5 @@
 using GetIt.API;
+using GetIt.Core.Logging;
 using GetIt.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddGetItApp();
+builder.Host.UseGetitLogger((context, services, configuration) =>
+{
+    Configuration.Configure(context, services, configuration);
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
