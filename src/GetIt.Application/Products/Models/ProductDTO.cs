@@ -16,7 +16,7 @@ namespace GetIt.Application.Products.Models
         {
             Name = name;
             BasePrice = basePrice;
-        }
+        }        
         public string Name { get; set; }
         public decimal BasePrice { get; set; }
     }

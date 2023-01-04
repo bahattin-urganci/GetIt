@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace GetIt.Application.Base
 {
-    public record AuditDTO :EntityDTO
+    public class BaseResponse<T>
     {
-        public DateTime CreatedDate { get; set; }
-        public DateTime? UpdateDate { get; set; }
+        public bool Succedded { get; set; } = true;
+        public T Result { get; set; }
+        public string Message { get; set; }
     }
 }
