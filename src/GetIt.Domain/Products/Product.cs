@@ -1,4 +1,5 @@
 ﻿using GetIt.Domain.Base;
+using GetIt.Domain.Products.Events;
 
 namespace GetIt.Domain.Products
 {
@@ -12,6 +13,9 @@ namespace GetIt.Domain.Products
         }
         public string Name { get; set; }
         public decimal BasePrice { get; set; }
-
+        public void AddNewProductEvent()
+        {
+            AddDomainEvent(new NewProductEvent(Name));
+        }
     }
 }

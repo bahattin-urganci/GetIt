@@ -17,8 +17,8 @@ public class DomainEventsDispatcherNotificationHandlerDecorator<T> : INotificati
 
     public async Task Handle(T notification, CancellationToken cancellationToken)
     {
-        await _decorated.Handle(notification, cancellationToken);
+        //await _decorated.Handle(notification, cancellationToken);
 
-        await _domainEventsDispatcher.DispatchEventsAsync();
+        //await _domainEventsDispatcher.DispatchEventsAsync();
     }
 }
