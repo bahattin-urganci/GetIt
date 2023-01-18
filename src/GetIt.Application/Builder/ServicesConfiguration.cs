@@ -25,6 +25,7 @@ namespace GetIt.Application.Builder
             services.AddRepositories();
             services.AddMediatR(Assembly.Load("GetIt.Application"), Assembly.Load("GetIt.Domain"), Assembly.Load("GetIt.Core"), Assembly.Load("GetIt.Data"));
             services.AddMapper();
+            services.AddMvc();
             services.AddValidatorsFromAssembly(Assembly.Load("GetIt.Application"));
             return services;
         }

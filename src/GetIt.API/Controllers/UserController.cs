@@ -1,4 +1,6 @@
-﻿using GetIt.Application.Users.Queries;
+﻿using GetIt.Application.Users.Commands;
+using GetIt.Application.Users.Models;
+using GetIt.Application.Users.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,6 +21,12 @@ namespace GetIt.API.Controllers
         public async Task<IActionResult> GetUserById(int id)
         {
             return Ok(await _mediator.Send(new GetUserById(id)));
+        }
+
+        [HttpPost("CreateUser")]
+        public async Task<IActionResult> CreateUser(CreateUserDTO user)
+        {
+            return Ok(await _mediator.Send(new CreateUser(user)));
         }
     }
 }
