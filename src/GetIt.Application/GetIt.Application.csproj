@@ -16,8 +16,6 @@
     <Folder Include="Orders\Models\" />
     <Folder Include="Orders\Queries\" />
     <Folder Include="Users\Commands\" />
-    <Folder Include="Users\Models\" />
-    <Folder Include="Users\Queries\" />
   </ItemGroup>
 
 </Project>
